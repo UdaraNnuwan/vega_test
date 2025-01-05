@@ -2,8 +2,7 @@ import { createMachine, createActor, assign } from 'xstate';
 import readline from 'readline';
 
 const readLine = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
+  input: process.stdin
 });
 
 const stateOptions = {
@@ -145,6 +144,8 @@ readLine.on('line', (input) => {
   if(input=='q'){
     console.log("Exiting the application...");
     readLine.close();
+    process.exit(0);
+
   }
   if (inputKeys.includes(input)) {
     actor.send({ type: input });
