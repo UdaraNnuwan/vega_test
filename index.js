@@ -137,6 +137,7 @@ actor.subscribe((state) =>
 {
     console.log(stateOptions[state.value] || "No options available for this state.");
 });
+export { evChargeMachine };
 
 const inputKeys= ['a', 'f', 's', 'c', 't', 'r','q'];
 console.log("Instructions:\nPress 'a' to authorize,\nPress 'f' to simulate failure\nPress 'r' to reset\nPress 'q' to quite");
